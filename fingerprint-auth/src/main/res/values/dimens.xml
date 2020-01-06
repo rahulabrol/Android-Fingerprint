@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_xxsmall">3dp</dimen>
+    <dimen name="margin_xsmall">5dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_large">15dp</dimen>
+    <dimen name="margin_xlarge">18dp</dimen>
+    <dimen name="margin_xxlarge">22dp</dimen>
+
+    <dimen name="padding_large">14dp</dimen>
+
+    <dimen name="fingerprint_bg_size">20dp</dimen>
+    <dimen name="fingerprint_logo_size">48dp</dimen>
+    <dimen name="fingerprint_bottom_sheet_padding">16dp</dimen>
+    <dimen name="fingerprint_image_size">60dp</dimen>
+
+    <dimen name="font_title">18sp</dimen>
+    <dimen name="font_subtitle">13sp</dimen>
+
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_22">22dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+</resources>

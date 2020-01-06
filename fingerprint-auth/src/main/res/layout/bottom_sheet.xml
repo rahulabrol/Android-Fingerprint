@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_15">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="@dimen/dimen_48"
+        android:layout_height="@dimen/dimen_48"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_logo"
+        android:layout_marginStart="@dimen/dimen_15"
+        android:layout_toEndOf="@+id/img_logo"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dialog_title"
+            android:textSize="@dimen/text_size_18"
+            tools:text="Text goes here" />
+
+        <TextView
+            android:id="@+id/item_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_3"
+            android:textColor="@color/dialog_subtitle"
+            android:textSize="@dimen/text_size_14"
+            tools:text="Text goes here" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_view"
+        android:layout_marginStart="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:layout_marginEnd="@dimen/dimen_15"
+        android:textColor="@color/dialog_description"
+        tools:text="Text goes here" />
+
+    <ImageView
+        android:id="@+id/img_fingerprint"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_60"
+        android:layout_below="@id/item_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:background="@drawable/bg_fingerprint"
+        android:contentDescription="@null"
+        android:padding="@dimen/dimen_14"
+        android:src="@drawable/ic_fingerprint" />
+
+    <TextView
+        android:id="@+id/item_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_fingerprint"
+        android:layout_marginTop="@dimen/dimen_18"
+        android:gravity="center"
+        android:textColor="@color/dialog_status"
+        tools:text="Error goes here" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_status"
+        android:layout_marginTop="@dimen/dimen_22"
+        android:background="@null"
+        android:paddingTop="@dimen/dimen_22"
+        android:textColor="@color/dialog_cancel_btn"
+        tools:text="Text goes here" />
+
+</RelativeLayout>

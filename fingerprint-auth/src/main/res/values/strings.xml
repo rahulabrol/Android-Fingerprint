@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Fingerprint-Auth</string>
+    <string name="fingerprint_failed">Fingerprint not recognized</string>
 </resources>
