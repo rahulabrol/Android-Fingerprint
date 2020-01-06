@@ -8,7 +8,7 @@
     <string name="fingerprint_negative_button_text">CANCEL</string>
 
     <string name="fingerprint_error_sdk_not_supported">Sdk version not supported</string>
-    <string name="fingerprint_error_hardware_not_supported">Device does not support biometric authentication</string>
+    <string name="fingerprint_error_hardware_not_supported">Device does not support fingerprint authentication</string>
     <string name="fingerprint_error_fingerprint_not_available">Fingerprint is not registered in device</string>
     <string name="fingerprint_error_permission_not_granted">Permission is not granted by user</string>
     <string name="fingerprint_failure">Login not successful!</string>
