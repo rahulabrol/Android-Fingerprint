@@ -38,7 +38,7 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
             fingerprintCallback.onBiometricAuthenticationInternalError("Fingerprint Dialog negative button text cannot be null")
             return
         }
-        if (!FingerprintUtils.isSdkVersionSupported()) {
+        if (!FingerprintUtils.isSdkVersionSupported) {
             fingerprintCallback.onSdkVersionNotSupported()
             return
         }
@@ -58,7 +58,7 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
     }
 
     fun cancelAuthentication() {
-        if (FingerprintUtils.isBiometricPromptEnabled()) {
+        if (FingerprintUtils.isBiometricPromptEnabled) {
             if (!mCancellationSignal.isCanceled) mCancellationSignal.cancel()
         } else {
             if (!mCancellationSignalV23.isCanceled) mCancellationSignalV23.cancel()
@@ -66,7 +66,7 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
     }
 
     private fun displayFingerprintDialog(fingerprintCallback: FingerprintCallback) {
-        if (FingerprintUtils.isBiometricPromptEnabled()) {
+        if (FingerprintUtils.isBiometricPromptEnabled) {
             displayFingerprintPrompt(fingerprintCallback)
         } else {
             displayFingerprintPromptV23(fingerprintCallback)
@@ -76,21 +76,21 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
     @TargetApi(Build.VERSION_CODES.P)
     private fun displayFingerprintPrompt(fingerprintCallback: FingerprintCallback) {
         BiometricPrompt.Builder(context)
-                .setTitle(title)
-                .setSubtitle(subtitle)
-                .setDescription(description)
-                .setNegativeButton(negativeButtonText, context.mainExecutor,
+                .setTitle(title!!)
+                .setSubtitle(subtitle!!)
+                .setDescription(description!!)
+                .setNegativeButton(negativeButtonText!!, context!!.mainExecutor,
                         DialogInterface.OnClickListener { _, _ -> fingerprintCallback.onAuthenticationCancelled() })
                 .build()
-                .authenticate(mCancellationSignal, context.mainExecutor,
+                .authenticate(mCancellationSignal, context!!.mainExecutor,
                         FingerprintCallbackV28(fingerprintCallback))
     }
 
     class FingerprintBuilder(val context: Context) {
-        var title: String? = null
-        var subtitle: String? = null
-        var description: String? = null
-        var negativeButtonText: String? = null
+        var title: String = ""
+        var subtitle: String = ""
+        var description: String = ""
+        var negativeButtonText: String = ""
 
         fun setTitle(title: String): FingerprintBuilder {
             this.title = title
