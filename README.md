@@ -6,7 +6,7 @@ This library provides an easy way to implement fingerprint authentication withou
 <img src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;" alt="API" data-canonical-src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;">
 
 
-<p><a href="https://github.com/anitaa1990/Biometric-Auth-Sample/blob/master/media/1.png" target="_blank"><img src="https://github.com/anitaa1990/Biometric-Auth-Sample/blob/master/media/1.png" width="250" style="max-width:100%;"></a></p>
+<p><a href="https://github.com/rahulabrol/Android-Fingerprint/blob/master/screenshots/image.jpeg" target="_blank"><img src="https://github.com/rahulabrol/Android-Fingerprint/blob/master/screenshots/image.jpeg" width="250" style="max-width:100%;"></a></p>
 </br></br></br>
 
 
