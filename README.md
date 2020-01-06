@@ -1,7 +1,7 @@
 # Fingerprint-Auth-Sample
 Add Fingerprint Authentication to Android application</br>
 
-This library provides an easy way to implement fingerprint authentication without having to deal with all the boilerplate stuff going on inside.
+This kotlin library provides an easy way to implement fingerprint authentication without having to deal with all the boilerplate stuff going on inside.
 
 <img src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;" alt="API" data-canonical-src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;">
 
@@ -34,68 +34,59 @@ FingerprintManager.FingerprintBuilder(this)
 The ```FingerprintCallback``` class has the following callback methods:
 
 ```
-object: FingerprintCallback() {
-              @Override
-              public void onSdkVersionNotSupported() {
-                     /*
-                      *  Will be called if the device sdk version does not support Fingerprint authentication
-                      */
-               }
+object :FingerprintCallback{
+                override fun onSdkVersionNotSupported() {
+                    /*
+                     *  Will be called if the device sdk version does not support Fingerprint authentication
+                     */
+                }
 
-               @Override
-               public void onBiometricAuthenticationNotSupported() {
+                override fun onBiometricAuthenticationNotSupported() {
                      /*
                       *  Will be called if the device does not contain any fingerprint sensors
                       */
-               }
+                }
 
-               @Override
-               public void onBiometricAuthenticationNotAvailable() {
+                override fun onBiometricAuthenticationNotAvailable() {
                     /*
                      *  The device does not have any fingerprint registered in the device.
                      */
-               }
+                }
 
-               @Override
-               public void onBiometricAuthenticationPermissionNotGranted() {
+                override fun onBiometricAuthenticationPermissionNotGranted() {
                       /*
                        *  android.permission.USE_BIOMETRIC permission is not granted to the app
                        */
-               }
+                }
 
-               @Override
-               public void onBiometricAuthenticationInternalError(String error) {
+                override fun onBiometricAuthenticationInternalError(error: String?) {
                      /*
                       *  This method is called if one of the fields such as the title, subtitle,
                       * description or the negative button text is empty
                       */
-               }
+                }
 
-               @Override
-               public void onAuthenticationFailed() {
+                override fun onAuthenticationFailed() {
                       /*
                        * When the fingerprint doesn’t match with any of the fingerprints registered on the device,
                        * then this callback will be triggered.
                        */
-               }
+                }
 
-               @Override
-               public void onAuthenticationCancelled() {
+                override fun onAuthenticationCancelled() {
                        /*
                         * The authentication is cancelled by the user.
                         */
-               }
+                }
 
-               @Override
-               public void onAuthenticationSuccessful() {
+                override fun onAuthenticationSuccessful() {
                         /*
                          * When the fingerprint is has been successfully matched with one of the fingerprints
                          * registered on the device, then this callback will be triggered.
                          */
-               }
+                }
 
-               @Override
-               public void onAuthenticationHelp(int helpCode, CharSequence helpString) {
+                override fun onAuthenticationHelp(helpCode: Int, helpString: CharSequence?) {
                          /*
                           * This method is called when a non-fatal error has occurred during the authentication
                           * process. The callback will be provided with an help code to identify the cause of the
@@ -103,15 +94,14 @@ object: FingerprintCallback() {
                           */
                 }
 
-                @Override
-                public void onAuthenticationError(int errorCode, CharSequence errString) {
+                override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
                          /*
                           * When an unrecoverable error has been encountered and the authentication process has
                           * completed without success, then this callback will be triggered. The callback is provided
                           * with an error code to identify the cause of the error, along with the error message.
                           */
-                 }
-              });
+                }
+            }
 
 ```
 
