@@ -16,7 +16,7 @@ This kotlin library provides an easy way to implement fingerprint authentication
 
 ```gradle
 dependencies {
-        implementation 'com.github.rahulabrol:Android-Fingerprint:1.0.2'
+        implementation 'com.github.rahulabrol:Android-Fingerprint:1.0.4'
 }
 ```
 
