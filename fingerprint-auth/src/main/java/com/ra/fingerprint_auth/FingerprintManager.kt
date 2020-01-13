@@ -88,13 +88,19 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
     }
 
     class FingerprintBuilder(val context: Context) {
-        var title: String = ""
-        var subtitle: String = ""
-        var description: String = ""
-        var negativeButtonText: String = ""
-        var icLauncher: Int? = null
+        internal var title: String = ""
+        internal var subtitle: String = ""
+        internal var description: String = ""
+        internal var negativeButtonText: String = ""
+        internal var icLauncher: Int? = null
 
-        fun setTitle(title: String): FingerprintBuilder {
+        fun setTitle(title: String) = apply { this.title = title }
+        fun setSubtitle(subtitle: String) = apply { this.subtitle = subtitle }
+        fun setDescription(description: String) = apply { this.description = description }
+        fun setNegativeButtonText(negativeButtonText: String) = apply { this.negativeButtonText = negativeButtonText }
+        fun setAppIcon(icLauncher: Int) = apply { this.icLauncher = icLauncher }
+
+        /*fun setTitle(title: String): FingerprintBuilder {
             this.title = title
             return this
         }
@@ -114,14 +120,14 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
             return this
         }
 
-        fun build(): FingerprintManager {
-            return FingerprintManager(this)
-        }
-
-        fun setAppIcon(icLauncher: Int): FingerprintBuilder {
+         fun setAppIcon(icLauncher: Int): FingerprintBuilder {
             this.icLauncher = icLauncher
             return this
         }
+        */
 
+        fun build(): FingerprintManager {
+            return FingerprintManager(this)
+        }
     }
 }
