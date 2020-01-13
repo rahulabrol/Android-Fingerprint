@@ -19,6 +19,7 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
         subtitle = fingerprintBuilder.subtitle
         description = fingerprintBuilder.description
         negativeButtonText = fingerprintBuilder.negativeButtonText
+        icLauncher = fingerprintBuilder.icLauncher
     }
 
     fun authenticate(fingerprintCallback: FingerprintCallback) {
@@ -91,6 +92,7 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
         var subtitle: String = ""
         var description: String = ""
         var negativeButtonText: String = ""
+        var icLauncher: Int? = null
 
         fun setTitle(title: String): FingerprintBuilder {
             this.title = title
@@ -114,6 +116,11 @@ class FingerprintManager protected constructor(fingerprintBuilder: FingerprintBu
 
         fun build(): FingerprintManager {
             return FingerprintManager(this)
+        }
+
+        fun setAppIcon(icLauncher: Int): FingerprintBuilder {
+            this.icLauncher = icLauncher
+            return this
         }
 
     }

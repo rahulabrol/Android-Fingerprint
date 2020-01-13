@@ -69,7 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/img_fingerprint"
-        android:layout_marginTop="@dimen/dimen_18"
+        android:layout_marginTop="@dimen/dimen_10"
         android:gravity="center"
         android:textColor="@color/dialog_status"
         tools:text="Error goes here" />
@@ -79,9 +79,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/item_status"
-        android:layout_marginTop="@dimen/dimen_22"
         android:background="@null"
-        android:paddingTop="@dimen/dimen_22"
+        android:gravity="bottom|center"
         android:textColor="@color/dialog_cancel_btn"
         tools:text="Text goes here" />
 

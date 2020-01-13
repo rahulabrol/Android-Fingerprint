@@ -24,47 +24,48 @@ class MainActivity : AppCompatActivity(), FingerprintCallback {
                     .setSubtitle(getString(R.string.fingerprint_subtitle))
                     .setDescription(getString(R.string.fingerprint_description))
                     .setNegativeButtonText(getString(R.string.fingerprint_negative_button_text))
+                    .setAppIcon(R.mipmap.ic_launcher)
                     .build()
             //start authentication
-            fingerprintAuth?.authenticate(object :FingerprintCallback{
+            fingerprintAuth?.authenticate(object : FingerprintCallback {
                 override fun onSdkVersionNotSupported() {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Sdk Version Not Supported", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onBiometricAuthenticationNotSupported() {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Not Supported", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onBiometricAuthenticationNotAvailable() {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Not Available", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onBiometricAuthenticationPermissionNotGranted() {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Permission Not Granted", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onBiometricAuthenticationInternalError(error: String?) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Internal Error", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onAuthenticationFailed() {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Failed", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onAuthenticationCancelled() {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Cancelled", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onAuthenticationSuccessful() {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Successful", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onAuthenticationHelp(helpCode: Int, helpString: CharSequence?) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication help", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
-                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    Toast.makeText(this@MainActivity, "Authentication Error", Toast.LENGTH_SHORT).show()
                 }
             })
         }

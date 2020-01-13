@@ -27,6 +27,7 @@ open class FingerprintManagerV23 {
     protected var subtitle: String? = null
     protected var description: String? = null
     protected var negativeButtonText: String? = null
+    protected var icLauncher: Int? = null
     protected var mCancellationSignalV23 = CancellationSignal()
     private var cipher: Cipher? = null
     private var keyStore: KeyStore? = null
